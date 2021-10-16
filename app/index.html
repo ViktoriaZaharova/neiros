@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Neiros</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#000">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#000">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+<div id="ClientInfoModalAdd" class="modal-my modal fade ClientInfoModal lids-neiros in" style="display: block">
+  <form id="add_ajax_project">
+    <div class="modal-dialog modal-dialog-user-card">
+      <div class="modal-content">
+
+        <!-- Заголовок модального окна -->
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        </div>
+
+        <!-- Основное содержимое модального окна -->
+        <div class="modal-body">
+          <div class="name-block-fixed">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6 col-xs-6">
+                  <div class="h1-modal pos-left">Информация</div>
+                </div>
+                <div class="col-sm-6 col-xs-6">
+                  <div class="h1-modal pos-right">История</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-body__content scroll-horizontal-modal">
+            <div class="container h100">
+              <div class="row row-my h100">
+
+                <!--                левый блок-->
+                <div class="col-sm-6 col-xs-12">
+                  <div class="card-user-modal card-user-modal__left">
+                    <div class="card-user-modal__head">
+                      <ul class="nav nav-tabs nav-tabs-my">
+                        <li role="presentation" class="active"><a data-toggle="tab" href="#tab1">Основная</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#tab2">Аналитика</a></li>
+                        <li role="presentation"><a data-toggle="tab" href="#tab3">Сделки</a></li>
+                        <li role="presentation" class="dropdown">
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                             aria-expanded="false">
+                            <span class="dropdown-toggle__icon">
+                              <img src="img/menu.svg" alt="">
+                              </span>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-my">
+                            <li><a href="#" class="dropdown-links">Заблокировать</a></li>
+                            <li><a href="#" class="dropdown-links">Настройки</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="card-user-modal__body">
+                      <div class="tab-content">
+                        <div class="tab-pane active pt-30" id="tab1">
+                          <div class="form-group form-group-my">
+                            <div class="row">
+                              <div class="col-xs-12 col-md-5">
+                                <label class="control-label control-label-my">
+                                  <span class="text-form-block">ФИО</span>
+                                </label>
+                              </div>
+
+                              <div class="col-xs-12 col-md-7">
+                                <div class="input-group">
+                                  <input type="text" class="form-control form-control-my" name="name" placeholder="ФИО">
+                                  <a href="#" class="btn-input btn-input-edit">
+                                    <img src="img/edit.svg" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group form-group-my">
+                            <div class="row">
+                              <div class="col-xs-12 col-md-5">
+                                <label class="control-label control-label-my">
+                                  <span class="text-form-block">Телефон</span>
+                                </label>
+                              </div>
+
+                              <div class="col-xs-12 col-md-7">
+                                <div class="input-group input-group-add">
+                                  <input type="text" class="form-control form-control-my" name="phone" placeholder=""
+                                         value="7 495 130 12 53">
+                                  <a href="#" class="btn-input btn-input-add">
+                                    <img src="img/plus.svg" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="form-group form-group-my">
+                            <div class="row">
+                              <div class="col-xs-12 col-md-5">
+                                <label class="control-label control-label-my">
+                                  <span class="text-form-block">E-mail</span>
+                                </label>
+                              </div>
+
+                              <div class="col-xs-12 col-md-7">
+                                <div class="input-group input-group-add">
+                                  <input type="text" class="form-control form-control-my" name="mail"
+                                         placeholder="e-mail">
+                                  <a href="#" class="btn-input btn-input-add">
+                                    <img src="img/plus.svg" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="col-xs-12">
+                              <a href="#" class="links-accent links-add">
+                                <span class="links-add__icon"><img src="img/plus-blue.svg" alt=""></span>
+                                <span class="links-add__text">Добавить комментарий</span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="tab-pane pt-30" id="tab2">
+                          <div class="form-group">
+
+                            <ul class="characteristics-info">
+                              <li>
+                                <p>Был онлайн</p><span>25 минут назад</span>
+                              </li>
+                              <li>
+                                <p>Всего визитов</p><span>212</span>
+                              </li>
+                              <li>
+                                <p>Общее время на сайте</p><span>36:03:42</span>
+                              </li>
+                              <li>
+                                <p>Регион</p><span>Россия</span>
+                              </li>
+                              <li>
+                                <p>ClienID Метрики</p><span>489</span>
+                              </li>
+                              <li>
+                                <p>Client ID Analytics</p><span>458 </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="tab-pane" id="tab3">
+                          <div class="form-group">
+                            <div class="table-responsive">
+                              <table class="table-my table-cabinet">
+                                <thead>
+                                <tr>
+                                  <th>Дата</th>
+                                  <th>Номер</th>
+                                  <th>Этап</th>
+                                  <th>Сумма</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                  <td>
+                                    <div class="table-cabinet__date">25.09.2021</div>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__number">123456</div>
+                                  </td>
+                                  <td>
+                                    <span class="status-deals bg-grey">В работе</span>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__sum input-group">
+                                      <input type="text" class="form-control form-control-my" name="name"
+                                             value="230 000 ₽">
+                                      <a href="#" class="btn-input btn-input-edit">
+                                        <img src="img/edit.svg" alt="">
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>
+                                    <div class="table-cabinet__date">25.09.2021</div>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__number">123456</div>
+                                  </td>
+                                  <td>
+                                    <span class="status-deals bg-orange">В работе</span>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__sum input-group">
+                                      <input type="text" class="form-control form-control-my" name="name"
+                                             value="230 000 ₽">
+                                      <a href="#" class="btn-input btn-input-edit">
+                                        <img src="img/edit.svg" alt="">
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>
+                                    <div class="table-cabinet__date">25.09.2021</div>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__number">123456</div>
+                                  </td>
+                                  <td>
+                                    <span class="status-deals bg-grey">В работе</span>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__sum input-group">
+                                      <input type="text" class="form-control form-control-my" name="name"
+                                             value="230 000 ₽">
+                                      <a href="#" class="btn-input btn-input-edit">
+                                        <img src="img/edit.svg" alt="">
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>
+                                    <div class="table-cabinet__date">25.09.2021</div>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__number">123456</div>
+                                  </td>
+                                  <td>
+                                    <span class="status-deals bg-grey">В работе</span>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__sum input-group">
+                                      <input type="text" class="form-control form-control-my" name="name"
+                                             value="230 000 ₽">
+                                      <a href="#" class="btn-input btn-input-edit">
+                                        <img src="img/edit.svg" alt="">
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>
+                                    <div class="table-cabinet__date">25.09.2021</div>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__number">123456</div>
+                                  </td>
+                                  <td>
+                                    <span class="status-deals bg-orange">В работе</span>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__sum input-group">
+                                      <input type="text" class="form-control form-control-my" name="name"
+                                             value="230 000 ₽">
+                                      <a href="#" class="btn-input btn-input-edit">
+                                        <img src="img/edit.svg" alt="">
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+
+                                <tr>
+                                  <td>
+                                    <div class="table-cabinet__date">25.09.2021</div>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__number">123456</div>
+                                  </td>
+                                  <td>
+                                    <span class="status-deals bg-orange">В работе</span>
+                                  </td>
+                                  <td>
+                                    <div class="table-cabinet__sum input-group">
+                                      <input type="text" class="form-control form-control-my" name="name"
+                                             value="230 000 ₽">
+                                      <a href="#" class="btn-input btn-input-edit">
+                                        <img src="img/edit.svg" alt="">
+                                      </a>
+                                    </div>
+                                  </td>
+                                </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="card-user-modal__footer">
+                      <div class="button-group">
+                        <button type="button" class="btn btn-my btn-default btn-opacity" data-dismiss="modal"
+                                aria-hidden="true">
+                          отменить
+                        </button>
+                        <button type="button" class="btn btn-my btn-primary btn-accent">Сохранить</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!--                правый блок-->
+                <div class="col-sm-6 col-xs-12">
+                  <div class="card-user-modal card-user-modal__right">
+
+                    <div class="timeline-block w100">
+                      <div class="timeline-block__head">
+                        <span>Четверг</span>
+                      </div>
+
+                      <div class="timeline-block__body">
+                        <div class="timeline-block__title">
+                          <div class="timeline-block__icon"><img src="img/telephone.png" alt=""></div>
+                          <div class="timeline-block__title-wrap">
+                            <h3>Звонок</h3>
+                            <span class="timeline-block__date">в 13:50:21</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="timeline-block__content">
+                        <div class="player-box"><img src="img/player.png" alt=""></div>
+
+                        <p>Страница <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
+                      </div>
+                    </div>
+
+                    <div class="timeline-block w100">
+                      <div class="timeline-block__head">
+                        <span>Вчера</span>
+                      </div>
+
+                      <div class="timeline-block__body">
+                        <div class="timeline-block__title">
+                          <div class="timeline-block__icon"><img src="img/like.png" alt=""></div>
+                          <div class="timeline-block__title-wrap">
+                            <h3>Продажа</h3>
+                            <span class="timeline-block__date">в 10:01:19</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="timeline-block__content">
+                        <ul class="characteristics-info">
+                          <li>
+                            <p>ID заказа</p><span>78955656563</span>
+                          </li>
+                          <li>
+                            <p>Сумма заказа</p><span>3 785 руб</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div class="timeline-block__body">
+                        <div class="timeline-block__title">
+                          <div class="timeline-block__icon"><img src="img/searh.png" alt=""></div>
+                          <div class="timeline-block__title-wrap">
+                            <h3>Визит</h3>
+                            <span class="timeline-block__date">в 14:15:03</span>
+                          </div>
+
+                          <a href="#" class="btn btn-border btn-toggle btn-my">Подробнее</a>
+                        </div>
+                      </div>
+
+                      <div class="timeline-block__content">
+                        <div class="block-toggle timeline-block-info">
+                          <ul class="characteristics-info">
+                            <li>
+                              <p>Источник</p><span><img src="img/direct-yandex.png" alt=""
+                                                        class="timeline-block-info__icon"> Директ</span>
+                            </li>
+                            <li>
+                              <p>Ключевой запрос</p><span>Ключевой запрос</span>
+                            </li>
+                            <li>
+                              <p>Регион</p><span>Россия</span>
+                            </li>
+                            <li>
+                              <p>Разрешение экрана</p><span>1920х1080</span>
+                            </li>
+                            <li>
+                              <p>Устройство</p><span>ПК</span>
+                            </li>
+                            <li>
+                              <p>IP адрес</p><span>189.156.97.003</span>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <ul class="list-time-lapse">
+                          <li>
+                            <p>Страница <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
+                          </li>
+                          <li>
+                            <p>Просмотр <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
+                          </li>
+                          <li>
+                            <p>Просмотр <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
+                          </li>
+                        </ul>
+
+                        <a href="#" class="links-accent links-add">
+                          <span class="links-add__icon"><img src="img/plus-blue.svg" alt=""></span>
+                          <span class="links-add__text">Еще 17</span>
+                        </a>
+                      </div>
+
+                      <div class="timeline-block__body">
+                        <div class="timeline-block__title">
+                          <div class="timeline-block__icon"><img src="img/transfer.png" alt=""></div>
+                          <div class="timeline-block__title-wrap">
+                            <h3>Статус сделки 123456 изменен</h3>
+                            <span class="timeline-block__date">в 14:15:03</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="timeline-block__content">
+                        <p>Изменился статус сделки с <span class="status-deals bg-grey">Неразобранное</span> на <span
+                            class="status-deals bg-orange">В работе</span></p>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-backdrop fade in"></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>
