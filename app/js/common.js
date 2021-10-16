@@ -18,3 +18,8 @@ $('.btn-toggle').on('click', function(e){
         content.slideUp();
     }
 });
+
+$('.links-add').on('click', function (e) {
+    e.preventDefault();
+    $(this).siblings('.form-box-hidden').slideToggle();
+});
