@@ -19,7 +19,24 @@ $('.btn-toggle').on('click', function(e){
     }
 });
 
-$('.links-add').on('click', function (e) {
+$('.links-add-comment').on('click', function (e) {
     e.preventDefault();
-    $(this).siblings('.form-box-hidden').slideToggle();
+    $(this).toggleClass('click').siblings('.form-box-hidden').slideToggle().find('textarea').focus();
+});
+
+
+$('.links-load-list').on('click', function (e) {
+    e.preventDefault();
+    $('.list-time-lapse li:hidden').slice(0, 17).slideDown();
+
+    var onBlock = $('.list-time-lapse li:hidden').length;
+    if(onBlock <= 0) {
+        $('.links-load-list').hide();
+    }
+});
+
+
+$('.btn-input-add').on('click', function (e) {
+   e.preventDefault();
+   $(this).parent().append('<input type="text" class="form-control form-control-my" name="">');
 });

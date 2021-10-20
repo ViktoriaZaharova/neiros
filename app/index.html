@@ -59,21 +59,19 @@
             </div>
           </div>
 
-          <div class="modal-body__content scroll-horizontal-modal">
+          <div class="modal-body__content">
             <div class="container h100">
-              <div class="row row-my h100">
-
-                <!--                левый блок-->
-                <div class="col-sm-6 col-xs-12">
+              <div class="row h100">
+                <div class="col-12 modal-body__wrapper">
+                  <!--                левый блок-->
                   <div class="card-user-modal card-user-modal__left">
                     <div class="card-user-modal__head">
                       <ul class="nav nav-tabs nav-tabs-my">
                         <li role="presentation" class="active"><a data-toggle="tab" href="#tab1">Основная</a></li>
                         <li role="presentation"><a data-toggle="tab" href="#tab2">Аналитика</a></li>
                         <li role="presentation"><a data-toggle="tab" href="#tab3">Сделки</a></li>
-                        <li role="presentation" class="dropdown">
-                          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                             aria-expanded="false">
+                        <li role="presentation" class="dropdown dropdown-my">
+                          <a class="dropdown-toggle">
                             <span class="dropdown-toggle__icon">
                               <img src="img/menu.svg" alt="">
                               </span>
@@ -149,12 +147,13 @@
 
                           <div class="row">
                             <div class="col-xs-12">
-                              <a href="#" class="links-accent links-add">
+                              <a href="#" class="links-accent links-add links-add-comment">
                                 <span class="links-add__icon"><img src="img/plus-blue.svg" alt=""></span>
                                 <span class="links-add__text">Добавить комментарий</span>
                               </a>
                               <div class="form-box-hidden">
-                                <textarea name="message" class="form-control form-control-my"></textarea>
+                                <textarea name="message"
+                                          class="form-control form-control-my textarea-no-resize"></textarea>
                               </div>
                             </div>
                           </div>
@@ -207,7 +206,40 @@
                                     <div class="table-cabinet__number">123456</div>
                                   </td>
                                   <td>
-                                    <span class="status-deals bg-grey">В работе</span>
+                                    <div class="dropdown dropdown-my dropdown-deals">
+                                      <a class="dropdown-toggle">
+                                        <span class="status-deals bg-grey">В работе</span>
+                                      </a>
+
+                                      <div class="dropdown-menu dropdown-menu-my">
+                                        <ul class="list-deals">
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-violet"></div>
+                                            <div class="list-deals__text">Этап первый</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-green"></div>
+                                            <div class="list-deals__text">Этап второй</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-blue"></div>
+                                            <div class="list-deals__text">Этап третий</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-yellow"></div>
+                                            <div class="list-deals__text">Еще один этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-red"></div>
+                                            <div class="list-deals__text">Тут будет еще этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-grey"></div>
+                                            <div class="list-deals__text">И еще один этап</div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
                                   </td>
                                   <td>
                                     <div class="table-cabinet__sum input-group">
@@ -228,7 +260,40 @@
                                     <div class="table-cabinet__number">123456</div>
                                   </td>
                                   <td>
-                                    <span class="status-deals bg-orange">В работе</span>
+                                    <div class="dropdown dropdown-my dropdown-deals">
+                                      <a class="dropdown-toggle">
+                                        <span class="status-deals bg-orange">В работе</span>
+                                      </a>
+
+                                      <div class="dropdown-menu dropdown-menu-my">
+                                        <ul class="list-deals">
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-violet"></div>
+                                            <div class="list-deals__text">Этап первый</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-green"></div>
+                                            <div class="list-deals__text">Этап второй</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-blue"></div>
+                                            <div class="list-deals__text">Этап третий</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-yellow"></div>
+                                            <div class="list-deals__text">Еще один этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-red"></div>
+                                            <div class="list-deals__text">Тут будет еще этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-grey"></div>
+                                            <div class="list-deals__text">И еще один этап</div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
                                   </td>
                                   <td>
                                     <div class="table-cabinet__sum input-group">
@@ -249,7 +314,40 @@
                                     <div class="table-cabinet__number">123456</div>
                                   </td>
                                   <td>
-                                    <span class="status-deals bg-grey">В работе</span>
+                                    <div class="dropdown dropdown-my dropdown-deals">
+                                      <a class="dropdown-toggle">
+                                        <span class="status-deals bg-grey">В работе</span>
+                                      </a>
+
+                                      <div class="dropdown-menu dropdown-menu-my">
+                                        <ul class="list-deals">
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-violet"></div>
+                                            <div class="list-deals__text">Этап первый</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-green"></div>
+                                            <div class="list-deals__text">Этап второй</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-blue"></div>
+                                            <div class="list-deals__text">Этап третий</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-yellow"></div>
+                                            <div class="list-deals__text">Еще один этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-red"></div>
+                                            <div class="list-deals__text">Тут будет еще этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-grey"></div>
+                                            <div class="list-deals__text">И еще один этап</div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
                                   </td>
                                   <td>
                                     <div class="table-cabinet__sum input-group">
@@ -270,7 +368,40 @@
                                     <div class="table-cabinet__number">123456</div>
                                   </td>
                                   <td>
-                                    <span class="status-deals bg-grey">В работе</span>
+                                    <div class="dropdown dropdown-my dropdown-deals">
+                                      <a class="dropdown-toggle">
+                                        <span class="status-deals bg-grey">В работе</span>
+                                      </a>
+
+                                      <div class="dropdown-menu dropdown-menu-my">
+                                        <ul class="list-deals">
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-violet"></div>
+                                            <div class="list-deals__text">Этап первый</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-green"></div>
+                                            <div class="list-deals__text">Этап второй</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-blue"></div>
+                                            <div class="list-deals__text">Этап третий</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-yellow"></div>
+                                            <div class="list-deals__text">Еще один этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-red"></div>
+                                            <div class="list-deals__text">Тут будет еще этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-grey"></div>
+                                            <div class="list-deals__text">И еще один этап</div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
                                   </td>
                                   <td>
                                     <div class="table-cabinet__sum input-group">
@@ -291,7 +422,40 @@
                                     <div class="table-cabinet__number">123456</div>
                                   </td>
                                   <td>
-                                    <span class="status-deals bg-orange">В работе</span>
+                                    <div class="dropdown dropdown-my dropdown-deals">
+                                      <a class="dropdown-toggle">
+                                        <span class="status-deals bg-orange">В работе</span>
+                                      </a>
+
+                                      <div class="dropdown-menu dropdown-menu-my">
+                                        <ul class="list-deals">
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-violet"></div>
+                                            <div class="list-deals__text">Этап первый</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-green"></div>
+                                            <div class="list-deals__text">Этап второй</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-blue"></div>
+                                            <div class="list-deals__text">Этап третий</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-yellow"></div>
+                                            <div class="list-deals__text">Еще один этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-red"></div>
+                                            <div class="list-deals__text">Тут будет еще этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-grey"></div>
+                                            <div class="list-deals__text">И еще один этап</div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
                                   </td>
                                   <td>
                                     <div class="table-cabinet__sum input-group">
@@ -312,7 +476,40 @@
                                     <div class="table-cabinet__number">123456</div>
                                   </td>
                                   <td>
-                                    <span class="status-deals bg-orange">В работе</span>
+                                    <div class="dropdown dropdown-my dropdown-deals">
+                                      <a class="dropdown-toggle">
+                                        <span class="status-deals bg-orange">В работе</span>
+                                      </a>
+
+                                      <div class="dropdown-menu dropdown-menu-my">
+                                        <ul class="list-deals">
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-violet"></div>
+                                            <div class="list-deals__text">Этап первый</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-green"></div>
+                                            <div class="list-deals__text">Этап второй</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-blue"></div>
+                                            <div class="list-deals__text">Этап третий</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-yellow"></div>
+                                            <div class="list-deals__text">Еще один этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-red"></div>
+                                            <div class="list-deals__text">Тут будет еще этап</div>
+                                          </li>
+                                          <li class="list-deals__item">
+                                            <div class="list-deals__color bg-light-grey"></div>
+                                            <div class="list-deals__text">И еще один этап</div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
                                   </td>
                                   <td>
                                     <div class="table-cabinet__sum input-group">
@@ -343,12 +540,10 @@
                       </div>
                     </div>
                   </div>
-                </div>
 
 
-                <!--                правый блок-->
-                <div class="col-sm-6 col-xs-12">
-                  <div class="card-user-modal card-user-modal__right">
+                  <!--                правый блок-->
+                  <div class="card-user-modal card-user-modal__right scroll-horizontal-modal">
 
                     <div class="timeline-block w100">
                       <div class="timeline-block__head">
@@ -372,7 +567,7 @@
                       </div>
                     </div>
 
-                    <div class="timeline-block w100">
+                    <div class="timeline-block w-100">
                       <div class="timeline-block__head">
                         <span>Вчера</span>
                       </div>
@@ -397,7 +592,9 @@
                           </li>
                         </ul>
                       </div>
+                    </div>
 
+                    <div class="timeline-block w-100">
                       <div class="timeline-block__body">
                         <div class="timeline-block__title">
                           <div class="timeline-block__icon"><img src="img/searh.png" alt=""></div>
@@ -445,14 +642,38 @@
                           <li>
                             <p>Просмотр <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
                           </li>
+
+                          <li>
+                            <p>Страница <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
+                          </li>
+                          <li>
+                            <p>Просмотр <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
+                          </li>
+                          <li>
+                            <p>Просмотр <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
+                          </li>
+
+                          <li>
+                            <p>Страница <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
+                          </li>
+                          <li>
+                            <p>Просмотр <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
+                          </li>
+                          <li>
+                            <p>Просмотр <a href="#" class="color-grey links-web d-inline">https://neiros.ru/</a></p>
+                          </li>
                         </ul>
 
-                        <a href="#" class="links-accent links-add">
+                        <a href="#" class="links-accent links-add links-load-list">
                           <span class="links-add__icon"><img src="img/plus-blue.svg" alt=""></span>
                           <span class="links-add__text">Еще 17</span>
                         </a>
                       </div>
 
+                    </div>
+
+
+                    <div class="timeline-block w100">
                       <div class="timeline-block__body">
                         <div class="timeline-block__title">
                           <div class="timeline-block__icon"><img src="img/transfer.png" alt=""></div>
@@ -471,6 +692,7 @@
 
                   </div>
                 </div>
+
 
               </div>
             </div>
