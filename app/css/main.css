@@ -131,23 +131,6 @@ input, textarea, select {
   max-width: 1170px;
   width: 100%; }
 
-.scroll-horizontal-modal {
-  overflow-y: auto; }
-  .scroll-horizontal-modal:before {
-    left: 0; }
-  .scroll-horizontal-modal::-webkit-scrollbar {
-    width: 3px; }
-  .scroll-horizontal-modal::-webkit-scrollbar-track {
-    -webkit-box-shadow: none !important;
-    border-radius: 0;
-    cursor: pointer;
-    background: #fff !important; }
-  .scroll-horizontal-modal::-webkit-scrollbar-thumb {
-    background: rgba(65, 66, 72, 0.22) !important;
-    border-radius: 1.5px; }
-    .scroll-horizontal-modal::-webkit-scrollbar-thumb:hover {
-      background: #00b9ee !important; }
-
 .modal-header {
   padding: 20px;
   border-bottom: 1px solid transparent;
@@ -188,8 +171,7 @@ input, textarea, select {
 
 .modal-body__content {
   width: calc(100% - 8px);
-  height: 100%;
-  overflow-y: auto; }
+  height: 100%; }
 
 .card-user-modal__head {
   width: 100%; }
@@ -510,7 +492,36 @@ textarea.form-control-my {
 .card-user-modal__right {
   position: relative;
   width: calc(50% + 22px);
-  padding: 30px 43px 55px 0; }
+  padding: 30px 0 20px 0; }
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 28px; }
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background: #414248;
+  opacity: .22;
+  border-radius: 1.5px;
+  width: 3px; }
+
+.mCSB_scrollTools .mCSB_draggerRail {
+  background: transparent;
+  width: 3px; }
+
+.mCSB_scrollTools:hover {
+  width: 6px; }
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+  background: #00b9ee;
+  opacity: 1;
+  width: 6px;
+  border-radius: 20px; }
+
+.mCSB_scrollTools {
+  width: 3px;
+  opacity: 1; }
+  .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+    background: #00b9ee;
+    opacity: 1; }
 
 .modal-body__wrapper {
   width: 100%;
@@ -673,10 +684,7 @@ a.color-grey:hover {
   margin: 0 0 15px; }
   .list-time-lapse li {
     position: relative;
-    padding: 15px 0 0 19px;
-    display: none; }
-    .list-time-lapse li:nth-child(-n+3) {
-      display: block; }
+    padding: 15px 0 0 19px; }
     .list-time-lapse li:before {
       content: '';
       position: absolute;

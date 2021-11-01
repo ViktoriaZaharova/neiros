@@ -156,28 +156,28 @@ input, textarea, select
     width: 100%
 
 
-.scroll-horizontal-modal
-  overflow-y: auto
-
-  &:before
-    left: 0
-
-  &::-webkit-scrollbar
-    width: 3px
-
-  &::-webkit-scrollbar-track
-    -webkit-box-shadow: none !important
-    -webkit-border-radius: 5px
-    border-radius: 0
-    cursor: pointer
-    background: #fff !important
-
-  &::-webkit-scrollbar-thumb
-    background: rgba(#414248, .22) !important
-    border-radius: 1.5px
-
-    &:hover
-      background: #00b9ee !important
+//.scroll-horizontal-modal
+//  overflow-y: auto
+//
+//  &:before
+//    left: 0
+//
+//  &::-webkit-scrollbar
+//    width: 3px
+//
+//  &::-webkit-scrollbar-track
+//    -webkit-box-shadow: none !important
+//    -webkit-border-radius: 5px
+//    border-radius: 0
+//    cursor: pointer
+//    background: #fff !important
+//
+//  &::-webkit-scrollbar-thumb
+//    background: rgba(#414248, .22) !important
+//    border-radius: 1.5px
+//
+//    &:hover
+//      background: #00b9ee !important
 
 .modal-header
   padding: 20px
@@ -213,7 +213,7 @@ input, textarea, select
 .modal-body__content
   width: calc(100% - 8px)
   height: 100%
-  overflow-y: auto
+  //overflow-y: auto
 
 .card-user-modal__head
   width: 100%
@@ -500,7 +500,37 @@ textarea.form-control-my
 .card-user-modal__right
   position: relative
   width: calc(50% + 22px)
-  padding: 30px 43px 55px 0
+  padding: 30px 0 20px 0
+
+.mCSB_inside>.mCSB_container
+  margin-right: 28px
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+  background: #414248
+  opacity: .22
+  border-radius: 1.5px
+  width: 3px
+
+.mCSB_scrollTools .mCSB_draggerRail
+  background: transparent
+  width: 3px
+
+.mCSB_scrollTools:hover
+  width: 6px
+
+
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar
+  background: #00b9ee
+  opacity: 1
+  width: 6px
+  border-radius: 20px
+
+.mCSB_scrollTools
+  width: 3px
+  opacity: 1
+  .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar
+    background: #00b9ee
+    opacity: 1
 
 
 .modal-body__wrapper
@@ -646,9 +676,9 @@ a.color-grey
   li
     position: relative
     padding: 15px 0 0 19px
-    display: none
-    &:nth-child(-n+3)
-      display: block
+    //display: none
+    //&:nth-child(-n+3)
+    //  display: block
     &:before
       content: ''
       position: absolute

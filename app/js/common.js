@@ -40,3 +40,10 @@ $('.btn-input-add').on('click', function (e) {
    e.preventDefault();
    $(this).parent().append('<input type="text" class="form-control form-control-my" name="">');
 });
+
+$(window).on("load",function(){
+    $(".scroll-horizontal-modal").mCustomScrollbar({
+        axis:"y"
+    });
+});
+
