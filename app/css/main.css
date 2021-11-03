@@ -737,6 +737,26 @@ a.color-grey:hover {
   .player-box img {
     width: 100%; }
 
+.url-page {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative; }
+  .url-page:hover .hidden-url-link {
+    display: block; }
+
+.hidden-url-link {
+  display: none;
+  position: absolute;
+  left: auto;
+  padding: 6px 9px;
+  background: #fff;
+  width: 100%;
+  z-index: 5;
+  min-width: 286px;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(50, 50, 50, 0.25);
+          box-shadow: 0 1px 4px 0 rgba(50, 50, 50, 0.25);
+  white-space: normal; }
+
 .status-deals {
   border-radius: 3px;
   padding: 5px 7px 4px 7px;
