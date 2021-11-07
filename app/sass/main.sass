@@ -741,23 +741,37 @@ a.color-grey
   white-space: nowrap
   overflow: hidden
   position: relative
-  &:hover
-    .hidden-url-link
-      display: block
+  display: inline-block
+  text-overflow: ellipsis
+  max-width: 70%
+  margin: 0px 0 -2px 3px
+  &:hover, &:focus
+    color: #00b9ee
 
 
-.hidden-url-link
-  display: none
-  position: absolute
-  left: auto
-  padding: 6px 9px
+.tooltip
+  top: 100%
+  left: 70px !important
+  width: calc(100% - 70px) !important
+  max-width: none
+  transform: none !important
+  opacity: 1 !important
+  box-shadow: 0 4px 10px rgba(#000, .2)
+  border: 1px solid rgba(#000, .1)
+  border-radius: 0
   background: #fff
-  //max-width: 299px
-  width: 100%
-  z-index: 5
-  min-width: 286px
-  box-shadow: 0 1px 4px 0 rgba(50,50,50, .25)
-  white-space: normal
+  .tooltip-inner
+    background: transparent
+    max-width: none
+    width: 100%
+    color: #989cad
+    text-align: left
+    border-radius: 0
+    padding: 0 5px
+    opacity: 1
+  .tooltip-arrow
+    display: none
+
 
 .status-deals
   border-radius: 3px
