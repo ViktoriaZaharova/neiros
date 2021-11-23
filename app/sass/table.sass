@@ -1,0 +1,271 @@
+.sequences
+  padding: 16px 19px
+
+.table-wrapper
+  width: 100%
+//overflow-x: auto
+
+.table-sequences
+  width: 100%
+  border-radius: 10px
+  box-shadow: 0px 6px 9px 0 rgba(18, 16, 11, 0.09)
+  background-color: #fff
+  margin: 20px 0
+  font-size: 15px
+
+  &__head, &__body
+    width: 100%
+    color: #414248
+
+  &__head
+    background: rgba(#f4f4f4, .47)
+    text-transform: uppercase
+    font-size: 12px
+    font-weight: 500
+    color: #414248
+    min-height: 32px
+
+  .td
+    text-align: center
+
+    &:first-child
+      text-align: left
+      justify-content: flex-start
+      width: 69%
+      padding: 8px 20px
+
+    &:last-child
+      width: 12%
+
+    &:nth-child(3)
+      width: 10%
+
+    &:nth-child(2)
+      width: 9%
+
+  &__body
+    .td
+    &:first-child
+      padding: 22px 20px 8px
+
+    &:nth-child(2), &:nth-child(3), &:last-child
+      font-family: 'Roboto', sans-serif
+
+.tr
+  width: 100%
+  display: flex
+  align-items: stretch
+  border-bottom: 1px solid rgba(#dedede, .4)
+
+  &:last-child
+    border: none
+
+.td
+  border-right: 1px solid rgba(#dedede, .4)
+  padding: 8px 15px
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: center
+
+  &:last-child
+    border: none
+
+.td-icon
+  max-width: 9px
+  width: 100%
+  margin: 0 0 0 10px
+  display: inline-flex
+  align-items: center
+
+.tags-list
+  width: 100%
+  display: flex
+  align-items: stretch
+  flex-wrap: wrap
+
+.table-tags
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 1
+  padding: 4px 12px 4px 9px
+  font-size: 15px
+  height: 26px
+  color: #414248
+  white-space: nowrap
+  margin: 0 20px 14px 0
+  border: 1px solid transparent
+    radius: 3px
+
+  &:last-child
+    margin-right: 0
+
+  &__icon
+    display: flex
+    align-items: center
+    margin: 0 9px 0 0
+    width: 16px
+    min-width: 16px
+
+  &:hover
+    color: #000
+
+  sup
+    color: #999
+    font-size: 9px
+    font-weight: bold
+    font-family: 'Roboto', sans-serif
+
+.table-tags-f
+  padding: 4px 12px 4px 8px
+  border-right: none
+
+  &:before
+    content: ''
+    position: absolute
+    height: 18px
+    width: 18px
+    right: -8px
+    top: 3px
+    background: inherit
+    z-index: -1
+    transform: rotate(45deg)
+    border: 1px solid transparent
+      radius: 3px
+      bottom-right-radius: 0
+      top-left-radius: 0
+      left: none
+      bottom: none
+
+.table-tags__wrap
+  position: relative
+  z-index: 1
+  margin: 0 20px 14px 0
+
+  &:last-child
+    margin-right: 0
+
+  .table-tags
+    margin: 0
+
+.table-tags-double
+  position: absolute
+  left: 4px
+  top: 4px
+  width: 100%
+  height: 100%
+  z-index: -1
+  background: inherit
+  border: 1px solid transparent
+    radius: 3px
+
+
+.table-tags-double-f
+  &:before
+    content: ''
+    position: absolute
+    height: 18px
+    width: 18px
+    right: -9px
+    top: 3px
+    background: inherit
+    z-index: -1
+    transform: rotate(45deg)
+    border: 1px solid transparent
+      radius: 3px
+      bottom-right-radius: 0
+      top-left-radius: 0
+      left: none
+      bottom: none
+
+.table-tags-double.table-tags-f
+  border-right: none
+
+.bg-red-light
+  background: #fce2cc
+  border-color: #ffa04f
+
+
+.bg-blue-light
+  background: #e8f2fe
+  border-color: #adc4df
+
+  &:before
+    border-color: inherit
+
+.bg-pink-light
+  background: #fcd3f2
+  border-color: #fc94e3
+
+  &:before
+    border-color: inherit
+
+.bg-grey-light
+  background: #eeeded
+  border-color: #c6c6c6
+
+  &:before
+    border-color: inherit
+
+.bg-yellow-light
+  background: #fef0c1
+  border-color: #fcd650
+
+  &:before
+    border-color: inherit
+
+.bg-green-light
+  background: #e8fef1
+  border-color: #a9ceb8
+
+  &:before
+    border-color: inherit
+
+.btn-grey
+  padding: 14px 22px
+  color: #414248
+  text-transform: uppercase
+  font-size: 13px
+  margin: 20px 0 0
+  border-radius: 3px
+  box-shadow: 0 0 8px 0 rgba(214, 225, 241, 0.52)
+  background-color: #d4d4d4
+
+  &:hover
+    box-shadow: 0px 6px 16px 0 rgba(73, 73, 73, 0.48)
+    background-color: #01a2f5
+    color: #fff
+
+.fixed-scroll-block
+  width: 100%
+  display: flex
+  align-items: stretch
+
+
+@media (max-width: 1100px)
+  .table-sequences
+    .td
+      &:first-child
+        width: 50%
+
+      &:nth-child(2)
+        width: 18%
+
+      &:nth-child(3)
+        width: 15%
+
+      &:last-child
+        width: 17%
+
+@media (max-width: 576px)
+  .table-wrapper
+    overflow-x: auto
+
+  .table-sequences
+    min-width: 850px
+
+@media (max-width: 480px)
+  .table-sequences
+    min-width: 600px
+
